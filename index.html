@@ -1,0 +1,82 @@
+<!doctype HTML>
+<html>
+<!--
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+
+-->
+
+<!-- include A-Frame obviously -->
+<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+<!-- include ar.js for A-Frame -->
+<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
+<script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
+<script>
+    THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'
+</script>
+
+<body style='margin : 0px; overflow: hidden;'>
+<a-scene embedded arjs>
+    <!-- define your gltf asset -->
+    <a-assets>
+        <a-asset-item id="almond-obj" src="./almondkernel.obj"></a-asset-item>
+        <a-asset-item id="female-obj" src="./Femal_Base_Mesh.obj"></a-asset-item>
+        <a-asset-item id="almond-mtl" src="./almondkernel.mtl"></a-asset-item>
+    </a-assets>
+    <!-- use your gltf model -->
+    <!--<a-entity gltf-model="##tree"></a-entity>-->
+
+<!--    <a-entity rotation="-20 0 0" position="0 0 10.75" scale="1 0 1">
+        <a-animation attribute="scale" to="1 1 1" delay="200" dur="1000" easing="ease-out"></a-animation>
+        <a-box width="12.5" depth="1" height="30" color="#EF2D5E" position="0 15 0">
+
+            <a-entity rotation="-140 0 0" position="0 15 0" scale="1 0 1">
+                <a-animation attribute="scale" to="1 1 1" delay="800" dur="800" easing="ease-out"></a-animation>
+                <a-box width="12.0" depth=".5" height="30" color="#24CAFF" position="0 15 -.5" shader="flat"></a-box>
+                <a-box width="12.5" depth="1" height="30" color="#EF2D5E" position="0 15 0"></a-box>
+            </a-entity>
+        </a-box>
+    </a-entity>-->
+
+    <!--<a-text value="Hello, Alfredo!"></a-text>-->
+    <a-image position="1 0 0 0" scale='1 1 1' src="alfredo.png"></a-image>
+    <a-image position="1 0 0.05 0" scale='0.8 0.8 0.8' src="alfredo.png"></a-image>
+    <a-image position="1 0 0.08 0" scale='0.6 0.6 0.6' src="alfredo.png"></a-image>
+
+
+<!--    <a-image position="-1 0 0 0" src="alfredo.png"></a-image>
+    <a-image position="0 1 0 0" src="nani.jpg"></a-image>
+    <a-image position="0 -1 0 0" src="nani.jpg"></a-image>
+    <a-image position="0 0 1 0" src="carlos.jpg"></a-image>
+    <a-image position="0 0 -1 0" src="carlos.jpg"></a-image>
+    <a-image position="0 0 0 0" src="avat.jpg"></a-image>-->
+    <!--<a-entity geometry="primitive:sphere;" material="shader:gif;src:url(giphy.gif);opacity:.8"></a-entity>-->
+    <!--<a-entity obj-model="obj: #female-obj"></a-entity>-->
+    <!-- define a camera which will move according to the marker position -->
+    <!--<a-marker-camera type="pattern" patternUrl="test.patt"></a-marker-camera>-->
+    <a-marker-camera type='pattern' patternUrl='test.patt'></a-marker-camera>
+    <!--<a-marker preset='custom' type='pattern' url='test.patt'>...</a-marker>-->
+</a-scene>
+</body>
+
+<!--<body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs>
+        <a-assets>
+            <a-asset-item id="almond-obj" src="./almondkernel.obj"></a-asset-item>
+            <a-asset-item id="female-obj" src="./Femal_Base_Mesh.obj"></a-asset-item>
+            <a-asset-item id="almond-mtl" src="./almondkernel.mtl"></a-asset-item>
+        </a-assets>
+
+        <a-marker preset="hiro">
+            <a-image src="alfredo.PNG"></a-image>
+
+            &lt;!&ndash;<a-box position='0 0.5 0' obj-model="obj: #female-obj"></a-box>&ndash;&gt;
+        </a-marker>
+
+        <a-entity camera obj-model="obj: #female-obj">
+        </a-entity>
+        <a-text value="Hello, World!"></a-text>
+        <a-image src="alfredo.PNG"></a-image>
+    </a-scene>
+</body>-->
+</html>
