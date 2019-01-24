@@ -7,6 +7,8 @@
 -->
 
 <!-- include A-Frame obviously -->
+<link rel="stylesheet" href="animation.css">
+<link rel="stylesheet" href="animate.css">
 <script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
 <!-- include ar.js for A-Frame -->
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
@@ -14,7 +16,6 @@
 <script>
     THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'
 </script>
-
 <body style='margin : 0px; overflow: hidden;'>
 <a-scene embedded arjs rotation="90 180 180">
     <!-- define your gltf asset -->
@@ -48,13 +49,25 @@
             </a-entity>
         </a-box>
     </a-entity>-->
-    <a-text position="0 1 0 0" value="Hello, Alfredo!">
 
+    <a-text position="0.5 0 0 0" value='File !'>
+        <a-animation attribute="opacity" dur="4000" from="0" to="1" direction="ease-in" repeat="0"></a-animation>
     </a-text>
-<!--    <a-image position="1 0 0 0" scale='1 1 1' src="alfredo.png"></a-image>
-    <a-image position="1 0 0.05 0" scale='0.8 0.8 0.8' src="alfredo.png"></a-image>
-    <a-image position="1 0 0.08 0" scale='0.6 0.6 0.6' src="alfredo.png"></a-image>-->
+    <a-text position="0.5 -0.2 0 0" value='dit-elle ...'>
+        <a-animation attribute="opacity" dur="4000" from="0" to="1" direction="ease-in" repeat="0"></a-animation>
+    </a-text>
+    <a-entity scale="4" text="value: What's up; color:#4b3984;"></a-entity>
+        <a-animation attribute="opacity" dur="4000" from="0" to="1" direction="ease-in" repeat="0"></a-animation>
 
+
+    <a-image id="rose1" position="1 2 0 0" scale='1 1 1' src="rose-des-vents1.png">
+    </a-image>
+    <a-image id="rose2" position="1 2 0.045 0" scale='0.8 0.8 0.8' src="rose-des-vents2.png">
+        <a-animation attribute="rotation" dur="4000" to="0 0 360" direction="alternate-reverse" repeat="indefinite"></a-animation>
+    </a-image>
+    <a-image id="rose3" position="1 2 0.08 0" scale='0.6 0.6 0.6' src="rose-des-vents3.png">
+        <a-animation attribute="rotation" dur="5000" from="0 0 360" to="0 0 0" direction="alternate-reverse" repeat="indefinite"></a-animation>
+    </a-image>
 
 <!--    <a-image position="-1 0 0 0" src="alfredo.png"></a-image>
     <a-image position="0 1 0 0" src="nani.jpg"></a-image>
@@ -62,13 +75,16 @@
     <a-image position="0 0 1 0" src="carlos.jpg"></a-image>
     <a-image position="0 0 -1 0" src="carlos.jpg"></a-image>
     <a-image position="0 0 0 0" src="avat.jpg"></a-image>-->
-    <a-entity scale="1.2 1.2 1.2" geometry="primitive:plane" material="shader:gif;src:url(tt.gif);opacity:1"></a-entity>
+    <!--<a-entity position="1 1 0 0" scale="1.2 1.2 1.2" geometry="primitive:box" material="shader:gif;src:url(rose.gif);opacity:1"></a-entity>-->
     <!--<a-entity obj-model="obj: #female-obj"></a-entity>-->
     <!-- define a camera which will move according to the marker position -->
-    <a-marker-camera preset="hiro"></a-marker-camera>
-    <!--<a-marker-camera type='pattern' url='./adam.patt'></a-marker-camera>-->
+    <!--<a-marker-camera preset="hiro"></a-marker-camera>-->
+    <a-marker-camera type='pattern' url='daniele.patt'></a-marker-camera>
     <!--<a-marker preset='custom' type='pattern' url='test.patt'>...</a-marker>-->
+
+    <!--<a-entity geometry="primitive:plane" material="shader:gif;src:url(fil.gif);" gif="fil.gif"></a-entity>-->
 </a-scene>
+
 </body>
 
 <!--<body style='margin : 0px; overflow: hidden;'>
