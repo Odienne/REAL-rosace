@@ -17,25 +17,35 @@
     THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'
 </script>
 <body style='margin : 0; overflow: hidden;'>
-<a-scene embedded arjs rotation="90 180 180">
-    <a-text scale="10 10 10" position="5 2 0 0" align="center" value='File !'>
-        <a-animation attribute="opacity" dur="4000" from="0" to="1" direction="ease-in" repeat="0"></a-animation>
-    </a-text>
-    <a-text scale="10 10 10" position="5 0 0 0" align="center" value='dit-elle ...'>
-        <a-animation attribute="opacity" dur="4000" from="0" to="1" direction="ease-in" repeat="0"></a-animation>
-    </a-text>
+<a-scene embedded arjs rotation="90 0 0">
 
-    <a-image id="rose1" position="5 8 0 0" scale='5 5 5' src="rose-des-vents1.png">
-    </a-image>
-    <a-image id="rose2" position="5 8 0.1 0" scale='5 5 5' src="rose-des-vents2.png" >
-        <a-animation attribute="rotation" dur="4000" to="0 0 360" direction="alternate-reverse" repeat="indefinite"></a-animation>
-    </a-image>
-    <a-image id="rose3" position="5 8 0.2 0" scale='2.6 2.6 2.6' src="rose-des-vents3.png">
-        <a-animation attribute="rotation" dur="5000" from="0 0 360" to="0 0 0" direction="alternate-reverse" repeat="indefinite"></a-animation>
-    </a-image>
+
+
+<!--        <a-text scale="10 10 10" color="#4b3984" position="5 2 0 0" align="center" value='Fil !'>
+            <a-animation attribute="opacity" dur="4000" from="0" to="1" direction="ease-in" repeat="0"></a-animation>
+        </a-text>
+        <a-text scale="10 10 10" color="#4b3984" position="5 0 0 0" align="center" value='dit-elle ...'>
+            <a-animation attribute="opacity" dur="4000" from="0" to="1" direction="ease-in" repeat="0"></a-animation>
+        </a-text>-->
+
+        <a-image position="5 0 0 0" scale='5 5 5' src="texte.png">
+            <a-animation attribute="opacity" dur="4000" from="0" to="1" direction="ease-in" repeat="0"></a-animation>
+        </a-image>
+
+        <a-image id="rose1" position="5 7.5 0 0" scale='5 5 5' src="rose-des-vents1.png">
+        </a-image>
+        <a-image id="rose2" position="5 7.5 0.4 0" scale='5 5 5' src="rose-des-vents2.png" >
+            <a-animation attribute="rotation" dur="4000" to="0 0 360" direction="alternate-reverse" repeat="indefinite"></a-animation>
+        </a-image>
+        <a-image id="rose3" position="5 7.5 0.8 0" scale='2.6 2.6 2.6' src="rose-des-vents3.png">
+            <a-animation attribute="rotation" dur="5000" from="0 0 360" to="0 0 0" direction="alternate-reverse" repeat="indefinite"></a-animation>
+        </a-image>
+
+
 
     <!--<a-marker-camera preset="hiro"></a-marker-camera>-->
     <a-marker-camera type='pattern' url='daniele.patt'></a-marker-camera>
+
 </a-scene>
 
 </body>
