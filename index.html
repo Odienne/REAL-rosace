@@ -28,23 +28,23 @@
             <a-animation attribute="opacity" dur="4000" from="0" to="1" direction="ease-in" repeat="0"></a-animation>
         </a-text>-->
 
-        <a-image position="5 0 0 0" scale='5 5 5' src="texte.png">
+<!--        <a-image position="5 1 0 0" scale='5 5 5' src="texte.png">
             <a-animation attribute="opacity" dur="4000" from="0" to="1" direction="ease-in" repeat="0"></a-animation>
-        </a-image>
+        </a-image>-->
 
-        <a-image id="rose1" position="5 7.5 0 0" scale='5 5 5' src="rose-des-vents1.png">
+        <a-entity position="5 1 0 0" scale='5 5 5' geometry="primitive:plane;" material="shader:gif;src:url(camarche.gif);"></a-entity>
+
+        <a-image id="rose1" position="5 7.5 0 0" scale='4.5 4.5 4.5' src="rose-des-vents1.png">
         </a-image>
-        <a-image id="rose2" position="5 7.5 0.4 0" scale='5 5 5' src="rose-des-vents2.png" >
+        <a-image id="rose2" position="5 7.5 0.2 0" scale='4.5 4.5 4.5' src="rose-des-vents2.png" >
             <a-animation attribute="rotation" dur="4000" to="0 0 360" direction="alternate-reverse" repeat="indefinite"></a-animation>
         </a-image>
-        <a-image id="rose3" position="5 7.5 0.8 0" scale='2.6 2.6 2.6' src="rose-des-vents3.png">
+        <a-image id="rose3" position="5 7.5 0.4 0" scale='3 3 3' src="rose-des-vents3.png">
             <a-animation attribute="rotation" dur="5000" from="0 0 360" to="0 0 0" direction="alternate-reverse" repeat="indefinite"></a-animation>
         </a-image>
 
-
-
     <!--<a-marker-camera preset="hiro"></a-marker-camera>-->
-    <a-marker-camera type='pattern' url='daniele.patt'></a-marker-camera>
+    <a-marker-camera type='pattern' url='marker.patt'></a-marker-camera>
 
 </a-scene>
 
