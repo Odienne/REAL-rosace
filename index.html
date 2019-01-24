@@ -16,95 +16,27 @@
 <script>
     THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'
 </script>
-<body style='margin : 0px; overflow: hidden;'>
+<body style='margin : 0; overflow: hidden;'>
 <a-scene embedded arjs rotation="90 180 180">
-    <!-- define your gltf asset -->
-    <a-assets>
-        <a-asset-item id="almond-obj" src="./almondkernel.obj"></a-asset-item>
-        <a-asset-item id="female-obj" src="./Femal_Base_Mesh.obj"></a-asset-item>
-        <a-asset-item id="almond-mtl" src="./almondkernel.mtl"></a-asset-item>
-    </a-assets>
-<!--    <a-entity>
-        <svg width="100%" height="100%" viewBox="30 -50 600 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-            <path id="path">
-                <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="indefinite"/>
-            </path>
-            <text font-size="26" font-family="Montserrat" fill='hsla(36, 95%, 85%, 1)'>
-                <textPath xlink:href="#path">I'm An Animated Typing Example && I'm All SVG.
-                </textPath>
-            </text>
-        </svg>
-    </a-entity>-->
-    <!-- use your gltf model -->
-    <!--<a-entity gltf-model="##tree"></a-entity>-->
-
-<!--    <a-entity rotation="-20 0 0" position="0 0 10.75" scale="1 0 1">
-        <a-animation attribute="scale" to="1 1 1" delay="200" dur="1000" easing="ease-out"></a-animation>
-        <a-box width="12.5" depth="1" height="30" color="#EF2D5E" position="0 15 0">
-
-            <a-entity rotation="-140 0 0" position="0 15 0" scale="1 0 1">
-                <a-animation attribute="scale" to="1 1 1" delay="800" dur="800" easing="ease-out"></a-animation>
-                <a-box width="12.0" depth=".5" height="30" color="#24CAFF" position="0 15 -.5" shader="flat"></a-box>
-                <a-box width="12.5" depth="1" height="30" color="#EF2D5E" position="0 15 0"></a-box>
-            </a-entity>
-        </a-box>
-    </a-entity>-->
-
-    <a-text position="0.5 0 0 0" value='File !'>
+    <a-text scale="10 10 10" position="5 2 0 0" align="center" value='File !'>
         <a-animation attribute="opacity" dur="4000" from="0" to="1" direction="ease-in" repeat="0"></a-animation>
     </a-text>
-    <a-text position="0.5 -0.2 0 0" value='dit-elle ...'>
+    <a-text scale="10 10 10" position="5 0 0 0" align="center" value='dit-elle ...'>
         <a-animation attribute="opacity" dur="4000" from="0" to="1" direction="ease-in" repeat="0"></a-animation>
     </a-text>
-    <a-entity scale="4" text="value: What's up; color:#4b3984;"></a-entity>
-        <a-animation attribute="opacity" dur="4000" from="0" to="1" direction="ease-in" repeat="0"></a-animation>
 
-
-    <a-image id="rose1" position="1 2 0 0" scale='3 3 3' src="rose-des-vents1.png">
+    <a-image id="rose1" position="5 8 0 0" scale='5 5 5' src="rose-des-vents1.png">
     </a-image>
-    <a-image id="rose2" position="1 2 0.1 0" scale='3 3 3' src="rose-des-vents2.png">
+    <a-image id="rose2" position="5 8 0.1 0" scale='5 5 5' src="rose-des-vents2.png" >
         <a-animation attribute="rotation" dur="4000" to="0 0 360" direction="alternate-reverse" repeat="indefinite"></a-animation>
     </a-image>
-    <a-image id="rose3" position="1 2 0.2 0" scale='2.6 2.6 2.6' src="rose-des-vents3.png">
+    <a-image id="rose3" position="5 8 0.2 0" scale='2.6 2.6 2.6' src="rose-des-vents3.png">
         <a-animation attribute="rotation" dur="5000" from="0 0 360" to="0 0 0" direction="alternate-reverse" repeat="indefinite"></a-animation>
     </a-image>
 
-<!--    <a-image position="-1 0 0 0" src="alfredo.png"></a-image>
-    <a-image position="0 1 0 0" src="nani.jpg"></a-image>
-    <a-image position="0 -1 0 0" src="nani.jpg"></a-image>
-    <a-image position="0 0 1 0" src="carlos.jpg"></a-image>
-    <a-image position="0 0 -1 0" src="carlos.jpg"></a-image>
-    <a-image position="0 0 0 0" src="avat.jpg"></a-image>-->
-    <!--<a-entity position="1 1 0 0" scale="1.2 1.2 1.2" geometry="primitive:box" material="shader:gif;src:url(rose.gif);opacity:1"></a-entity>-->
-    <!--<a-entity obj-model="obj: #female-obj"></a-entity>-->
-    <!-- define a camera which will move according to the marker position -->
     <!--<a-marker-camera preset="hiro"></a-marker-camera>-->
     <a-marker-camera type='pattern' url='daniele.patt'></a-marker-camera>
-    <!--<a-marker preset='custom' type='pattern' url='test.patt'>...</a-marker>-->
-
-    <!--<a-entity geometry="primitive:plane" material="shader:gif;src:url(fil.gif);" gif="fil.gif"></a-entity>-->
 </a-scene>
 
 </body>
-
-<!--<body style='margin : 0px; overflow: hidden;'>
-    <a-scene embedded arjs>
-        <a-assets>
-            <a-asset-item id="almond-obj" src="./almondkernel.obj"></a-asset-item>
-            <a-asset-item id="female-obj" src="./Femal_Base_Mesh.obj"></a-asset-item>
-            <a-asset-item id="almond-mtl" src="./almondkernel.mtl"></a-asset-item>
-        </a-assets>
-
-        <a-marker preset="hiro">
-            <a-image src="alfredo.PNG"></a-image>
-
-            &lt;!&ndash;<a-box position='0 0.5 0' obj-model="obj: #female-obj"></a-box>&ndash;&gt;
-        </a-marker>
-
-        <a-entity camera obj-model="obj: #female-obj">
-        </a-entity>
-        <a-text value="Hello, World!"></a-text>
-        <a-image src="alfredo.PNG"></a-image>
-    </a-scene>
-</body>-->
 </html>
